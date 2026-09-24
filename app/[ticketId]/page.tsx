@@ -32,16 +32,16 @@ export default async function TicketPage({
           alt="Event banner"
         />
 
-        <div className="pass-title">{ticket.passLabel} - 2 of 4</div>
+        <div className="pass-title">
+          {ticket.passLabel} - {ticket.page} of 4
+        </div>
 
         <div className="details-grid">
           <div className="details-column">
             <div className="label">TICKET ID</div>
             <div className="big-value">{ticket.ticketId}</div>
-
             <div className="label">ORDER ID</div>
             <div className="big-value">{ticket.orderId}</div>
-
             <div className="person">
               {ticket.name}
               <br />
@@ -52,10 +52,8 @@ export default async function TicketPage({
           <div className="details-column right">
             <div className="label">GATE</div>
             <div className="big-value">{ticket.gate}</div>
-
             <div className="label">DATE &amp; VENUE</div>
             <div className="big-value">{ticket.date}</div>
-
             <div className="person">
               {ticket.gateOpens}
               <br />
@@ -70,7 +68,6 @@ export default async function TicketPage({
               This entry pass is a sample/demo document for UI testing. It is
               not an official ticket and does not grant event access.
             </p>
-
             <strong>Terms &amp; Conditions</strong>
             <ul>
               <li>One ticket admits one person only.</li>
