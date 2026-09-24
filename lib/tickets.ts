@@ -22,6 +22,17 @@ export const tickets: Record<string, TicketData> = {
     venue: "Courtside, Madani Avenue, Dhaka-1212",
     passLabel: "VIP SEATING - ENTRY PASS",
   },
+  J7K4N2Q9: {
+    ticketId: "J7K4N2Q9",
+    orderId: "M5ILPK",
+    name: "Jannat Khanam",
+    phone: "01571567890",
+    gate: "Gate No 1",
+    date: "05th Dec, 25",
+    gateOpens: "Gate Opens @15:00",
+    venue: "Courtside, Madani Avenue, Dhaka-1212",
+    passLabel: "VIP SEATING - ENTRY PASS",
+  },
 };
 
 export function getTicket(ticketId: string): TicketData {
