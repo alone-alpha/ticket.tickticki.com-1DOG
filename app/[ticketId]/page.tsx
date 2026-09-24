@@ -1,4 +1,5 @@
 import DemoQr from "../../components/DemoQr";
+import PrintButton from "../../components/PrintButton";
 import { getTicket, tickets } from "../../lib/tickets";
 
 export const dynamic = "force-static";
@@ -18,9 +19,7 @@ export default function TicketPage({
     <main className="page-shell">
       <div className="toolbar no-print">
         <a className="back-btn" href="/">&lt; Go Back</a>
-        <button className="print-btn" type="button" onClick={() => window.print()}>
-          Print / Save
-        </button>
+        <PrintButton />
       </div>
 
       <section className="ticket">
@@ -30,9 +29,6 @@ export default function TicketPage({
           className="hero"
           src="https://print.tickticki.com/images/kaavish26/ticket_1400px560px.jpg"
           alt="Event banner"
-          onError={(e) => {
-            e.currentTarget.style.display = "none";
-          }}
         />
 
         <div className="pass-title">{ticket.passLabel}</div>
@@ -95,9 +91,6 @@ export default function TicketPage({
           className="footer-banner"
           src="https://print.tickticki.com/images/kaavish26/footer_1400px_100px.jpg"
           alt=""
-          onError={(e) => {
-            e.currentTarget.style.display = "none";
-          }}
         />
 
         <div className="partner">Software Development Partner</div>
