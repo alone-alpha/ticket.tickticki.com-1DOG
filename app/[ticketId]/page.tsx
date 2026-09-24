@@ -1,13 +1,12 @@
 import DemoQr from "../../components/DemoQr";
 import { getTicket } from "../../lib/tickets";
 
-export default async function TicketPage({
+export default function TicketPage({
   params,
 }: {
-  params: Promise<{ ticketId: string }>;
+  params: { ticketId: string };
 }) {
-  const { ticketId } = await params;
-  const ticket = getTicket(ticketId);
+  const ticket = getTicket(params.ticketId);
 
   return (
     <main className="page-shell">
