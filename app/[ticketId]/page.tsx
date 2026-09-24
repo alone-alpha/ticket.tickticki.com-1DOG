@@ -8,12 +8,13 @@ export function generateStaticParams() {
   return Object.keys(tickets).map((ticketId) => ({ ticketId }));
 }
 
-export default function TicketPage({
+export default async function TicketPage({
   params,
 }: {
-  params: { ticketId: string };
+  params: Promise<{ ticketId: string }>;
 }) {
-  const ticket = getTicket(params.ticketId);
+  const { ticketId } = await params;
+  const ticket = getTicket(ticketId);
 
   return (
     <main className="page-shell">
