@@ -216,6 +216,56 @@ body {
   line-height: 1.6;
 }
 
+.error-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #f3f3f3;
+}
+
+.error-card {
+  width: min(560px, 100%);
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 35px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.error-card h1 {
+  margin: 10px 0;
+}
+
+.error-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.error-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.error-actions .print-btn,
+.error-actions .back-btn {
+  width: auto;
+  min-width: 150px;
+}
+
+@media (max-width: 600px) {
+  .error-actions {
+    flex-direction: column;
+  }
+
+  .error-actions .print-btn,
+  .error-actions .back-btn {
+    width: 100%;
+  }
+}
+
 .open-btn {
   width: 100%;
   margin-top: 24px;
