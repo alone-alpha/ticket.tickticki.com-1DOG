@@ -32,7 +32,7 @@ export default async function TicketPage({
           alt="Event banner"
         />
 
-        <div className="pass-title">{ticket.passLabel}</div>
+        <div className="pass-title">{ticket.passLabel} - 2 of 4</div>
 
         <div className="details-grid">
           <div className="details-column">
@@ -67,25 +67,30 @@ export default async function TicketPage({
         <div className="content-row">
           <div className="terms">
             <p>
-              The entry pass is a sample/demo document for UI testing. It is not
-              an official ticket and does not grant event access.
+              This entry pass is a sample/demo document for UI testing. It is
+              not an official ticket and does not grant event access.
             </p>
 
             <strong>Terms &amp; Conditions</strong>
             <ul>
               <li>One ticket admits one person only.</li>
-              <li>Valid ticket and photo ID may be required at entry.</li>
-              <li>Tickets may be subject to event-specific rules.</li>
+              <li>Age limit: 16+. Valid ticket and photo ID required.</li>
+              <li>Tickets are non-transferable, non-refundable &amp; non-resalable.</li>
+              <li>Weapons, alcohol, drugs, tobacco/vapes, outside food &amp; drinks are prohibited.</li>
+              <li>Bags, power banks, chargers &amp; Bluetooth speakers are not allowed.</li>
               <li>Security checks may be conducted at entry.</li>
-              <li>Outside food and prohibited items may not be allowed.</li>
-              <li>Event management controls final entry decisions.</li>
+              <li>No refund unless the event is cancelled.</li>
+              <li>Management reserves the right to refuse entry or remove anyone causing disturbance.</li>
+              <li>CCTV, photography and videography may be in operation at the venue.</li>
+              <li>This page is a demo UI for software testing.</li>
             </ul>
           </div>
 
-          <div className="qr-wrap">
-            <DemoQr value={ticket.ticketId} />
-            <small>QR-style visual placeholder</small>
-          </div>
+          <aside className="qr-panel" aria-label="Demo QR area">
+            <div className="qr-wrap">
+              <DemoQr value={`DEMO-TICKET:${ticket.ticketId}`} />
+            </div>
+          </aside>
         </div>
 
         <img
@@ -94,7 +99,9 @@ export default async function TicketPage({
           alt=""
         />
 
-        <div className="partner">Software Development Partner</div>
+        <div className="partner">
+          Software Development Partner <strong>LILABALI.COM</strong>
+        </div>
       </section>
     </main>
   );
